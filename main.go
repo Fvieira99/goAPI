@@ -3,16 +3,10 @@ package main
 import (
 	fmt "fmt"
 
-	gin "github.com/gin-gonic/gin"
+	router "github.com/Fvieira99/goAPI.git/router"
 )
 
 func main(){
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run()
+	router.Initialize()
 	fmt.Println("Olá Mundo")
 }
